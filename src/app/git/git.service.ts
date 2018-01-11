@@ -5,16 +5,17 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class GitService {
 
-  private username:string;
-  private apiUrl:string = "https://api.github.com/users/"
+  private username:string ="SamNgigi";
+  private apiUrl:string = "https://api.github.com/users/";
+
+  gitProfile(){
+    return this.http.get(this.apiUrl+this.username).map(result =>  result)
+  }
 
   constructor(private http:HttpClient) {
       console.log("GitService Ready");
-      this.username ="SamNgigi"
    }
 
-  gitProfile(){
-    return this.http.get(this.apiUrl+this.username).map(result => result)
-  }
+
 
 }
