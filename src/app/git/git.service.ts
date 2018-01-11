@@ -6,12 +6,15 @@ import 'rxjs/add/operator/map';
 export class GitService {
 
   private username:string;
-  private m
+  private apiUrl:string = "https://api.github.com/users/"
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+      console.log("GitService Ready");
+      this.username ="SamNgigi"
+   }
 
-  gitProfiles(){
-    return
+  gitProfile(){
+    return this.http.get(this.apiUrl+this.username).map(result => result)
   }
 
 }
