@@ -10,7 +10,11 @@ font-family: 'Pacifico', cursive;
 font-family: 'Dosis', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
-body {
+*{
+  font-family: 'Raleway', sans-serif;
+  
+}
+body{
   background: linear-gradient( to right, #f2ffe6,#ffffff, #e6f9ff);
 }
 .card{
