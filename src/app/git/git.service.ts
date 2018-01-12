@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class GitService {
 
-  private username: string = "SamNgigi";
+  private username: string;
   private clientId: string = "4d70422b5fdbbdac483b"
   private apiUrl: string = "https://api.github.com/users/";
   private clientSecret: string = environment.Git_Secret;
@@ -22,6 +22,7 @@ export class GitService {
 
   constructor(private http: HttpClient) {
     console.log("GitService Ready");
+    this.username = "SamNgigi"
   }
 
 
