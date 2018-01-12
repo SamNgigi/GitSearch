@@ -10,11 +10,6 @@ export class AppComponent {
 
   constructor(private gitService: GitService) {}
 
-  ngOnInit() {
-    this.gitService.gitProfile()
-      .subscribe(res => {
-        console.log(res)
-      })
-  }
+  
 
 }

@@ -5,5 +5,7 @@
 
 export const environment = {
   production: false,
-  
+  GitSecret: "07d08eaee256e80bb53b7d91a8aff63c0c08c596"
+
+
 };

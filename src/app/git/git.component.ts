@@ -9,13 +9,15 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./git.component.css']
 })
 export class GitComponent implements OnInit {
-
+users:any = [];
   constructor(private gitService:GitService) { }
 
   ngOnInit() {
-
-  
-
+    this.gitService.gitProfile()
+      .subscribe(res => {
+        //console.log(res)
+        this.users = res;
+      })
   }
 
 }
