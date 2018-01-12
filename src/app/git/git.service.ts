@@ -25,6 +25,9 @@ export class GitService {
     this.username = "SamNgigi"
   }
 
+  updateUser(username:string){
+    this.username = username;
+  }
 
 
 }

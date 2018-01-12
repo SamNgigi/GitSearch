@@ -27,11 +27,11 @@
   <form>
     <div class="form-group">
 
-      <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search Github">
+      <input type="text" class="form-control" name="name" id="gitSearch" aria-describedby="emailHelp" placeholder="Search Github" [(ngModel)]="username"(keyup)="searchUser()" >
       <small id="emailHelp" class="form-text text-muted">Angular manze. Hautatuweza!! </small>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+  {{username}}
 </div>
 <!--Users-->
 <div class="container mt-5" *ngIf="users">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { GitService } from '../git/git.service';
 import 'rxjs/add/operator/map';
@@ -9,10 +10,11 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./git.component.css']
 })
 export class GitComponent implements OnInit {
-users:any = [];
-repos:any = [];
+  users: any = [];
+  repos: any = [];
+  username: string;
 
-  constructor(private gitService:GitService) { }
+  constructor(private gitService: GitService) { }
 
   ngOnInit() {
     this.gitService.gitProfile()
@@ -21,11 +23,27 @@ repos:any = [];
         this.users = res;
       })
 
-      this.gitService.gitRepos()
-        .subscribe(data => {
-          //console.log(data)
-          this.repos = data;
-        })
+    this.gitService.gitRepos()
+      .subscribe(data => {
+        //console.log(data)
+        this.repos = data;
+      })
+  }
+
+  searchUser() {
+    this.gitService.updateUser(this.username);
+
+    this.gitService.gitProfile()
+      .subscribe(res => {
+        //console.log(res)
+        this.users = res;
+      })
+
+    this.gitService.gitRepos()
+      .subscribe(data => {
+        //console.log(data)
+        this.repos = data;
+      })
   }
 
 }
