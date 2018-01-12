@@ -7,17 +7,17 @@ import 'rxjs/add/operator/map';
 export class GitService {
 
   private username: string;
-  // private clientId: string = "4d70422b5fdbbdac483b"
   private apiUrl: string = "https://api.github.com/users/";
-  private clientSecret: string = environment.Git_Secret;
-//Git profiles
-  gitProfile(){
-    return this.http.get(this.apiUrl + this.username+"?access_token=" +this.clientSecret).map(result => result)
+  private apiKey: string = environment.Git_Secret;
+
+  //Git profiles
+  gitProfile() {
+    return this.http.get(this.apiUrl + this.username + "?access_token=" + this.apiKey).map(result => result)
   }
 
   //Git Repos
-  gitRepos(){
-    return this.http.get(this.apiUrl + this.username+"/repos"+"?access_token="+this.clientSecret).map(result => result)
+  gitRepos() {
+    return this.http.get(this.apiUrl + this.username + "/repos" + "?access_token=" + this.apiKey).map(result => result)
   }
 
   constructor(private http: HttpClient) {
@@ -25,7 +25,7 @@ export class GitService {
     this.username = "SamNgigi"
   }
 
-  updateUser(username:string){
+  updateUser(username: string) {
     this.username = username;
   }
 
