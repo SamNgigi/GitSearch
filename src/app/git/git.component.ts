@@ -23,8 +23,8 @@ repos:any = [];
 
       this.gitService.gitRepos()
         .subscribe(data => {
-          //console.log(res)
-          this.users = data;
+          //console.log(data)
+          this.repos = data;
         })
   }
 
