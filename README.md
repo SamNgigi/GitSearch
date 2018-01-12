@@ -8,14 +8,14 @@ Anita's Kitchen
 **This is a GitHub user and repo search web application that uses the github api**
 
 
-The site includes;
+The site welcomes you with a simple but styled u.i, with a navbar, search form  and cards displaying a default user and repo. Just;
 
 
-- a banner/landing section with a full screen navigation
-- an events section
-- a menu section
-- a subscription section
-- a footer.
+- Key in username you want to find on Github.
+- The cards will respond and display matching the username typed  
+- The profile avatar and brief details will be displayed in main card.
+- Repositories will be listed in card below.
+- On username or repo result to go to users repos.
 
 ### What we used
 This site was build using  
@@ -24,9 +24,11 @@ This site was build using
 3. `JavaScript`
 4. `jQuery`
 5. `Bootstrap`.
+6. `Angular 5`
+7. `TypeScript`
 
 
-Click [here](https://samngigi.github.io/mpft-ip/) to see the site.
+Click [here](ttps://samngigi.github.io/GitSearch/) to see the site.
 
 ------------
 
