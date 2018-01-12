@@ -15,7 +15,7 @@ The site welcomes you with a simple but styled u.i, with a navbar, search form  
 - The cards will respond and display matching the username typed  
 - The profile avatar and brief details will be displayed in main card.
 - Repositories will be listed in card below.
-- On username or repo result to go to users repos.
+- click on interested repository in result to go to users repo.
 
 ### What we used
 This site was build using  
