@@ -10,6 +10,8 @@ import 'rxjs/add/operator/map';
 })
 export class GitComponent implements OnInit {
 users:any = [];
+repos:any = [];
+
   constructor(private gitService:GitService) { }
 
   ngOnInit() {
@@ -18,6 +20,12 @@ users:any = [];
         //console.log(res)
         this.users = res;
       })
+
+      this.gitService.gitRepos()
+        .subscribe(data => {
+          //console.log(res)
+          this.users = data;
+        })
   }
 
 }
