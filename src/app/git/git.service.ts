@@ -12,12 +12,12 @@ export class GitService {
   private clientSecret: string = environment.Git_Secret;
 //Git profiles
   gitProfile(){
-    return this.http.get(this.apiUrl + this.username+"?clientSecret="+this.clientSecret).map(result => result)
+    return this.http.get(this.apiUrl + this.username+"?access_token=" +this.clientSecret).map(result => result)
   }
 
   //Git Repos
   gitRepos(){
-    return this.http.get(this.apiUrl + this.username+"/repos"+"?clientSecret="+this.clientSecret).map(result => result)
+    return this.http.get(this.apiUrl + this.username+"/repos"+"?access_token="+this.clientSecret).map(result => result)
   }
 
   constructor(private http: HttpClient) {

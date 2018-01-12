@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><img class="img-fluid mr-2" src="../assets/git-1-2.png" alt="">GitSearch</a>
+  <a class="navbar-brand" href="#"><img class="img-fluid mr-3" src="../assets/git-1-2.png" alt="">GitSearch</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,7 +22,17 @@
   </div>
 </nav>
 
+<!--Search Form-->
+<div class="container mt-4">
+  <form>
+    <div class="form-group">
 
+      <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search Github">
+      <small id="emailHelp" class="form-text text-muted">Angular manze. Hautatuweza!! </small>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
 <!--Users-->
 <div class="container mt-5" *ngIf="users">
   <div class="card card-default  p-4">
