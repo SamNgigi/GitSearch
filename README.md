@@ -28,7 +28,7 @@ This site was build using
 7. `TypeScript`
 
 
-Click [here](ttps://samngigi.github.io/GitSearch/) to see the site.
+Click [here](https://samngigi.github.io/GitSearch/) to see the site.
 
 ------------
 
